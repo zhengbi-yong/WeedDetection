@@ -59,8 +59,6 @@ def convert_annotations_to_yolo(input_dir, output_dir):
     print(f"转换完成！所有标签已保存到 {output_dir}")
 
 # 示例用法：
-# input_folder = "D:\\WeedDetection\\dataset\\train\\train\\labels"  # 输入文件夹路径，包含json格式的标签
-# output_folder = "D:\\WeedDetection\\dataset\\train\\train\\labels_yolo"  # 输出文件夹路径，保存转换后的YOLO标签
-input_folder = "D:\\WeedDetection\\dataset\\test\\test\\labels"  # 输入文件夹路径，包含json格式的标签
-output_folder = "D:\\WeedDetection\\dataset\\test\\test\\labels_yolo"  # 输出文件夹路径，保存转换后的YOLO标签
+input_folder = "./weed-detection/train/labels_origin"  # 输入文件夹路径，包含json格式的标签
+output_folder = "./weed-detection/train/labels"  # 输出文件夹路径，保存转换后的YOLO标签
 convert_annotations_to_yolo(input_folder, output_folder)

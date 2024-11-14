@@ -4,14 +4,14 @@ from ultralytics import YOLO
 
 if __name__ == "__main__":
     # 加载 YOLO 模型
-    model = YOLO("D:\\lightning-hydra-template\\runs\\detect\\train13\\weights\\best.pt")
+    model = YOLO("./runs/detect/train5/weights/best.pt")
     
     # 进行预测，设置置信度和 IoU 阈值
     results = model.predict(
-        source="D:\\lightning-hydra-template\\data\\WeedDetection\\images\\test",
+        source="./weed-detection/test/images",  # 测试图像的文件夹
         show=False,
-        conf=0.25,  # 置信度阈值，根据需要调整
-        iou=0.45    # IoU 阈值，根据需要调整
+        conf=0.20,  # 置信度阈值，根据需要调整
+        iou=0.40    # IoU 阈值，根据需要调整
     )
 
     # 打开一个 CSV 文件以写入结果
